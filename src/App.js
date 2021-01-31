@@ -1,25 +1,42 @@
-import logo from './logo.svg';
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import './App.css';
+import Dashboard from './Componentes/Dashboard';
+import NavBar from './Componentes/NavBar';
+import Pokemon from './Componentes/Pokemon';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+export default class App extends Component {
+
+  state = { busqueda: "" }
+  callbackFunction = (data) => {
+    this.setState({ busqueda: data })
+
+  }
+
+  render() {
+    return (
+      <Router>
+        <div className="App">
+          <NavBar parentCallback={this.callbackFunction} />
+          <div className="container-fluid">
+            <Switch>
+              <Route exact path="/" render={() => {
+                return <div>
+                  <Dashboard busqueda={this.state.busqueda} />
+                </div>
+              }}>
+              </Route>
+              <Route exact path="/pokemon/:id" component={Pokemon} />
+
+            </Switch>
+          </div>
+        </div>
+      </Router>
+    )
+
+
+  }
 }
-
-export default App;
