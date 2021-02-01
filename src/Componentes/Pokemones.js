@@ -13,7 +13,7 @@ export default class Pokemones extends Component {
     async componentDidMount() {
         //const res = await fetch('https://pokeapi.co/api/v2/pokemon')
         //const data = await res.json();
-        const res = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=15`)
+        const res = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=151`)
 
 
         this.setState({ pokemones: res.data['results'] })
