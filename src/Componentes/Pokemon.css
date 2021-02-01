@@ -2,7 +2,7 @@
     top:30px;
     position: absolute;
     border: 10px solid #4a4a4a ;
-    height: 70spx;
+    height: 70px;
     font-size: 45px;
     background-color: #fcffd8;
     text-transform:uppercase;
@@ -11,7 +11,7 @@
     font-weight:lighter;
 }
 
-.row{
+.rowPokemon{
     justify-content:center;
     height: 700px;
     display: flex;
@@ -70,8 +70,6 @@
 	-webkit-border-radius: 5px; 
 	-moz-border-radius: 5px;
     -o-border-radius: 10px;
-    
-    
 }
 
 .baseStat{

@@ -62,7 +62,7 @@ export default class Pokemon extends Component {
 
     render() {
         return (
-            <div className="row">
+            <div className="rowPokemon">
                 <div className="nombre">
                     {this.state.nombre}
                 </div>

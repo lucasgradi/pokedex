@@ -4,7 +4,7 @@
     background-image: url(./Imagenes/fondo3.png);
 }
 .container-fluid{
-    width: 700px;
+	width: 700px;
 	min-width: 300px;
 	max-width: 75%;
 	margin: 0 auto;
@@ -15,7 +15,12 @@
 	-moz-border-radius: 10px;
 	-o-border-radius: 10px;
 	background-color: #f8fbe6;
+	border:5px solid #4a4a4a;
 	
-	
+}
+
+@font-face{
+    src:url(./fonts/PokeFont.ttf);
+    font-family: nos;
 }
 

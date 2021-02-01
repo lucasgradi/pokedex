@@ -14,7 +14,7 @@ export default class NavBar extends Component {
     render() {
         return (
             <div>
-                <Navbar bg="dark" variant="dark">
+                <Navbar variant="dark">
                     <Form inline className="mx-auto my-1 order-0 order-md-1 position-relative">
                         <FormControl type="text" placeholder="Buscar en Pokedex" className="mr-sm-2" onChange={this.sendData} />
                     </Form>
