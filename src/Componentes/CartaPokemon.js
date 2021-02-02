@@ -49,15 +49,14 @@ export default class CartaPokemon extends Component {
     render() {
         return (
 
-            <div className="col-lg-2 col-md-4 mb-5" key={this.state.nombre}>
+            <div className="col-lg-2 col-md-4 mb-5" key={this.state.nombre}  >
                 <Link to={`pokemon/${this.state.id}`}>
 
                     <Card
                         border={'#9E9E9E'}
-                        style={{ width: '12rem' }}
+                        style={{ width: '13rem' }}
                         props={Pokemon}
                         className="cartaResumida"
-
                     >
                         <Card.Header className="Header">#{this.state.dataPokemon.id}</Card.Header>
                         <Card.Body>
@@ -77,7 +76,7 @@ export default class CartaPokemon extends Component {
                             <div className="type">{this.pokemonType(this.state.dataPokemon)}</div>
                         </Card.Body >
                     </Card>
-                </Link>
+                </Link >
             </div >
 
         )
